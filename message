@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Internal Messaging System</title> 
+<style>
+body {
+font-family: Arial, sans-serif; 
+}
+#message-container {
+width: 400px;
+margin: 0 auto;
+padding: 20px;
+background-color:#f5f5f5; 
+}
+h1 { 
+text-align: center; 
+}
+form {
+margin-top: 20px;
+}
+label {
+display: block; margin-bottom: 10px;
+}
+input[type="text"], 
+textarea {
+width: 100%;
+padding: 10px; 
+font-size: 14px;
+}
+textarea {
+height: 100px;
+}
+input[type="submit"]
+{ 
+width: auto;
+padding: 10px 20px;
+font-size: 14px; 
+background-color: #4caf50; 
+color: white; 
+border: none;
+cursor: pointer;
+}
+.message { 
+margin-bottom: 20px; 
+padding: 10px;
+background-color: #e0e0e0;
+}
+.message p { 
+margin: 0; 
+}
+.dropbtn {
+  background-color: #3498DB;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover,
+.dropbtn:focus {
+  background-color: #2980B9;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: flex;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: inline;}
+</style>
+</head>
+<body style="background-color:white;">
+     <div id="message-container">
+      <h1>Internal Messaging System</h1> 
+  
+      <div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">recipient</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="#admin">admin</a>
+    <a href="#user">user</a>
+    <a href="#reviewer">reviewer</a>
+  </div>
+</div>    
+       <form id="message-form"> 
+       <label for="message">Message:</label> 
+       <textarea id="message" required></textarea>
+       <input type="submit" value="Send Message"> 
+       </form>
+       <div id="messages"> 
+</div>
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+</body>
+</html>
