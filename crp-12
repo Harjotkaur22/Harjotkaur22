@@ -1,20 +1,43 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Popup</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="styles.css">
+  <style>
+    button{
+      width: 150px;
+      height: 40px;
+      background-color: darkcyan;
+      color: white;
+      border: none;
+      margin: 5px;
+    }
+  </style>
 </head>
 <body>
 
-<!-- Button to trigger the modal --><!-- aa massage  than nl read krlo aa oh button de coding a jis te click krke pop up open hunda wa eh button othe dena jthe pop up show krona wa samj ge sister ?-->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-  Open Popup
-</button>
+<!-- Button to trigger the modal -->
+<button type="button"  data-toggle="modal" data-target="#exampleModal">
+  Create Message
+</button><br>
+  <!-- Inbox Button -->
+  <button type="button"  data-toggle="modal" data-target="#exampleModal1">
+    Inbox
+  </button><br>
 
-<!-- Popup modal -->   <!-- aa sari pop up de coding a eh sab bootstrp nal bnya je as vich colour ja kuj chnages krone a mnu ds deo-->
+  <!-- Delete Button -->
+  <button type="button"  data-toggle="modal" data-target="#exampleModal2">
+    Detete Message
+  </button><br>
+  <!-- Bin Button-->
+  <button type="button"  data-toggle="modal" data-target="#exampleModal3">
+    Bin Message
+  </button>
+  
+  
+<!-- Send Message -->   
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -38,8 +61,76 @@
             <label for="message">Message:</label>
             <textarea class="form-control" id="message" rows="3"></textarea>
           </div>
-          <button type="submit" class="btn btn-primary">Send Massage</button>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        
         </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Inbox Pop Up -->
+<div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Messages</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <!-- Messages -->
+        <h2 style="text-align: center;">No Message</h2>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary">Reply All</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Delete Pop Up -->
+<div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Delete Messages</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <!-- Messages -->
+       
+        <h2 style="text-align: center;">No Message</h2>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Delete Messages</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <!-- Messages -->
+       
+        <h2 style="text-align: center;">No Message</h2>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
@@ -48,6 +139,8 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+
 </body>
 </html>
-
